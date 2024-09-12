@@ -1,0 +1,16 @@
+/* Custom styles for layout */
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 56px; /* Navbar height */
+}
+.content {
+    flex: 1; /* Takes up available space */
+}
+footer {
+    background-color: #343a40;
+    color: white;
+}
