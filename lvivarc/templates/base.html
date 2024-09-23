@@ -19,17 +19,29 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        {% comment %} {% url 'group1' %} {% endcomment %}
-                        <a class="nav-link" href="#">Церкви та монастирі</a>
-                    </li>
-                    <li class="nav-item">
+                    {% for group in groups %}
+                        <li class="nav-item">
+                            {% comment %} {% url 'group1' %} {% endcomment %}
+                            {% comment %} {% url '' slug=group.slug %} {% endcomment %}
+                            <a class="nav-link" href="{% url "group_detail" slug=group.slug %}">{{ group.title }}</a>
+                        </li>
+                    {% endfor %}
+
+
+                    {% comment %} <li class="nav-item">
                         <a class="nav-link" href="#">Оборонні структури</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Цивільна архітектура</a>
+                    </li> {% endcomment %}
+                </ul>
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url "admin:index" %}">admin panel</a>
                     </li>
                 </ul>
+
             </div>
         </div>
     </nav>

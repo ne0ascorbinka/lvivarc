@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'architecture'
 ]
 
 MIDDLEWARE = [
@@ -62,7 +63,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'lvivarc.context_processors.current_year'
+                'lvivarc.context_processors.current_year',
+                'lvivarc.context_processors.groups'
             ],
         },
     },
