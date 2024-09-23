@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ place.title }} - Lviv Architecture
+{% endblock title %}
+
+{% block content %}
+    <div class="text-center page-header container-fluid">  
+        <h1>{{ place.title }}</h1>
+    </div>
+
+    {% comment %} img {% endcomment %}
+
+    <div class="col-lg-8 col-md-7 col-sm-6">
+        <p class="text-justify">
+          {{ place.text }}
+        </p>
+        </br>
+        <p>
+          Current address: {{ place.address }}
+        </p>
+      </div>
+
+{% endblock content %}
