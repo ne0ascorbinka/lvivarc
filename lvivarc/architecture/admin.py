@@ -9,5 +9,5 @@ class ArchitectureGroupAdmin(admin.ModelAdmin):
 
 @admin.register(ArchitectureObject)
 class ArchitecureObjectAdmin(admin.ModelAdmin):
-    list_display = ('title', 'address')
+    list_display = ('title', 'image')
     search_fields = ('title',   )

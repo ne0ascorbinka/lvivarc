@@ -162,3 +162,4 @@ cython_debug/
 #.idea/
 
 lvivarc_db.sqlite3
+media/

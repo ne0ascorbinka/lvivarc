@@ -16,9 +16,11 @@ class ArchitectureGroup(models.Model):
     def __str__(self) -> str:
         return self.title
 
+
 class ArchitectureObject(models.Model):
     title = models.CharField(max_length=79)
     # image = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None)
     text = models.TextField()
     address = models.CharField(max_length=255)
     group = models.ForeignKey(ArchitectureGroup, related_name="arc_objects", on_delete=models.CASCADE)
+    image = models.ImageField(upload_to="images/", blank=True, null=True)
