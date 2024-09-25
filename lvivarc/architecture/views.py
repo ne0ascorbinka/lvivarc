@@ -10,4 +10,4 @@ def group_page(request: HttpRequest, slug: str) -> HttpResponse:
 
 def object_page(request: HttpRequest, pk: int, slug) -> HttpResponse:
     arc_object = get_object_or_404(ArchitectureObject, pk=pk)
-    return render(request, 'object.html', context={"place": arc_object})
+    return render(request, 'object.html', context={"place": arc_object, "slug": slug})

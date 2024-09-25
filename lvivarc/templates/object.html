@@ -5,20 +5,39 @@
 {% endblock title %}
 
 {% block content %}
+
+    <nav class="navbar navbar-default">      
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{% url "group_detail" slug=place.group.slug%}">
+          <p class="text-primary">
+            <i class="bi bi-arrow-left"></i>
+            <strong>{{ place.group.title }}</strong>
+          </p>
+        </a>
+      </div>
+    </nav>
+
     <div class="text-center page-header container-fluid">  
         <h1>{{ place.title }}</h1>
     </div>
 
-    {% comment %} img {% endcomment %}
+    <div class="row">
+      {% if place.image %}
+          <div class="col-lg-3 col-md-4 col-sm-5">
+            <img src="{{ place.image.url }}" alt="{{ place.title }} image" 
+              class="center-block img-fluid">
+        </div>
+      {% endif %}
 
-    <div class="col-lg-8 col-md-7 col-sm-6">
-        <p class="text-justify objArticle">
-          {{ place.text }}
-        </p>
-        </br>
-        <p>
-          Current address: {{ place.address }}.
-        </p>
-      </div>
+      <div class="col-lg-8 col-md-7 col-sm-6">
+          <p class="text-justify objArticle">
+            {{ place.text }}
+          </p>
+          </br>
+          <p>
+            Current address: {{ place.address }}.
+          </p>
+        </div>
+    </div>
 
 {% endblock content %}
