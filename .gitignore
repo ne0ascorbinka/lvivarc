@@ -163,3 +163,5 @@ cython_debug/
 
 lvivarc_db.sqlite3
 media/
+*/utils/pages/
+output_data.json
